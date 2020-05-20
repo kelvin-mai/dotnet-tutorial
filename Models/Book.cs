@@ -1,26 +1,22 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace TodoApi.Models
-{
-  public class Book
-  {
+namespace TodoApi.Models {
+  public class Book {
     [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
+    [BsonRepresentation (BsonType.ObjectId)]
     public string Id { get; set; }
 
-    [BsonElement("Name")]
+    [BsonElement ("Name")]
     public string BookName { get; set; }
 
-    [BsonElement("Price")]
+    [BsonElement ("Price")]
     public decimal Price { get; set; }
 
-    [BsonElement("Category")]
+    [BsonElement ("Category")]
     public string Category { get; set; }
 
-    [BsonElement("Author")]
+    [BsonElement ("Author")]
     public string Author { get; set; }
-
-
   }
 }
